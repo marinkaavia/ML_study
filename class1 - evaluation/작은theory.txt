@@ -1,0 +1,11 @@
+Lesson 1 
+Lost function - function to evaluate performance for 1 object only
+A quality function for a machine learning model is a metric or a set of metrics used to evaluate the performance and effectiveness of the model, in simple words -it is summarized result of model performance based on lost function for 1 object
+Example of evaluation metrics:
+For regression usually use
+MSE - mean squared error
+MAE - mean absolute error
+R2 -  R-Squared 
+
+R2:
+tells us the proportion of the variance in the dependent variable that is predictable from the independent variable(s). An R-Squared of 100% indicates that all changes in the dependent variable are completely explained by changes in the independent variable(s)
