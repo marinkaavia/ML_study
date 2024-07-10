@@ -1,0 +1,47 @@
+Linear Regression 
+
+Simple linear Regression Equations
+
+1 Parameter Case (Line)
+a(x) = b1 * x + b0
+
+2 Parameter Case (2D Plane in 3D Space):
+a(x) = b1 * x1 + b2 * x2 + b0
+
+n Parameter Case (n-1 Dimensional Hyperplane in n Dimensional Space):
+a(x) = b1 * x1 + b2 * x2 + ... + bn * xn + b0
+
+b0 is a constant term added to all equations (costant param)
+
+Objective of Linear Regression
+The goal of linear regression is to find the best-fitting parameters β = (b1, b2, ..., bn, b0) that minimize the error (or loss) between the predicted values a(x) and the actual values. Mathematically, this is represented as:
+
+β* = argmin(Q(a(x), X))
+
+Where Q is a quality functional that quantifies the errors, such as the sum of squared deviations of points from the regression line.
+
+Finding the best Coefficients b1, b2, ..., bn
+
+Method 1: Direct Calculation
+
+1. For each object make the derivative of the error function to find the extremums
+2. Solve the system of linear equations
+2. Use Sylvester's Criterion to determine whether the extremum is a local minimum or maximum
+
+Method 2: Matrix Method
+
+1. Setup the Matrices:
+   - X: An n x k matrix where n is the number of observations and k is the number of parameters (including the constant term).
+   - β: A vector of coefficients (b1, b2, ..., bn, b0).
+   - y: A vector of the observed results.
+
+2.Mean Squared Error (MSE) in Matrix Form:
+   Q = (1/n) * (Xβ - y)^T * (Xβ - y)
+
+3. Minimize the MSE using Matrix Differentiation:
+   - Derive the formula for the optimal coefficients:
+     β* = (X^T * X)^-1 * X^T * y
+
+Helping materials:
+(RUS) For a deeper understanding of the matrix differentiation, see: https://habr.com/ru/articles/479398/
+(ENG) For a visual explanation of hyperplanes, see: https://youtu.be/Dsa2MX2grMg?si=Ul2Mwpfovt0elQG3
